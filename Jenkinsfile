@@ -8,12 +8,13 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'npm install --verbose' 
+                sh 'npm install --verbose'
+		sh 'npm audit'
             }
         }
 	stage('test') {
 	    steps {
-		sh './jenkins/script/test.sh'
+		sh './jenkins/scripts/test.sh'
 	    }
 	}
     }
