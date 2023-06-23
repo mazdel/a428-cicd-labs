@@ -11,5 +11,10 @@ pipeline {
                 sh 'npm install --verbose' 
             }
         }
+	stage('test') {
+	    steps {
+		sh './jenkins/script/test.sh'
+	    }
+	}
     }
 }
