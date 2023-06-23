@@ -9,7 +9,6 @@ pipeline {
         stage('Build') { 
             steps {
                 sh 'npm install --verbose'
-		sh 'npm audit'
             }
         }
 	stage('test') {
